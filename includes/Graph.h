@@ -18,8 +18,7 @@ class Edge
 	int destination;
 
 public:
-
-	Edge(int s,int d)
+	Edge(int s, int d)
 	{
 		source = s;
 		destination = d;
@@ -76,7 +75,6 @@ namespace graph
 		}
 	}
 
-	
 }
 
 #endif
