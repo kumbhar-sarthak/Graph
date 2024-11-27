@@ -38,5 +38,7 @@ int main()
 	}
 	
 	graph::displayGraph();
+	graph::Travel::BFS(1);
+
 
 }
