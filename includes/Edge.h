@@ -1,6 +1,6 @@
 
-#ifndef EDGE_H
-#define EDGE_H
+#ifndef INCLUDES_EDGE_H
+#define INCLUDES_EDGE_H
 
 
 #include<iostream>
@@ -31,4 +31,4 @@ class Edge{
         }
 };
 
-#endif
+#endif  // INCLUDES_EDGE_H
