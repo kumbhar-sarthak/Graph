@@ -5,8 +5,8 @@
  *
  */
 
-#ifndef GRAPHUTIL_H
-#define GRAPHUTIL_H
+#ifndef INCLUDES_GRAPHUTIL_H
+#define INCLUDES_GRAPHUTIL_H
 
 #include <vector>
 #include <iostream>
@@ -92,4 +92,4 @@ namespace graph
 
 }
 
-#endif
+#endif // INCLUDES_GRAPHUTIL_H
