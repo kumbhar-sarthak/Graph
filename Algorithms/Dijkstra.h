@@ -43,7 +43,7 @@ private:
 public:
 
     // Dijkstra's algorithm to find the shortest path from source to all other vertices
-    std::vector<int> run(int src) {
+    std::vector<int> shortestPath(int src) {
         std::vector<int> dist(adj.size(), INT_MAX);  // Distance from source to each vertex
         dist[src] = 0;
 
@@ -78,9 +78,9 @@ public:
     }
 
     // Utility to print the shortest distances from the source
-    void printShortestPaths(int src) {
+    void run(int src) {
         std::cout<<"Dijkstra Algo"<<std::endl;
-        std::vector<int> dist = run(src);
+        std::vector<int> dist = shortestPath(src);
         std::cout << "Shortest distances from vertex " << src << ":\n";
         for (int i = 0; i < adj.size(); ++i) {
             std::cout << "Vertex " << i << ": ";

@@ -30,17 +30,20 @@ public:
   BellmanFord() : dist(s, std::numeric_limits<int>::max()) {} // constructor
   
   // function to find the shortest path from source to all other vertices
-  void bellmanFord(int start) {
-    dist[start] = 0;
+  std::vector<int> bellmanFord(int start) {
+    std::vector<int> temp(s, std::numeric_limits<int>::max());
+    temp[start] = 0;
     for (int i = 0; i < s - 1; i++) {
       for (int j = 0; j < s; j++) {
         for (auto &edge : adj[j]) {
-          if (dist[j] + edge.getWeight() < dist[edge.getDestination()]) {
-            dist[edge.getDestination()] = dist[j] + edge.getWeight();
+          if (temp[j] + edge.getWeight() < temp[edge.getDestination()]) {
+            temp[edge.getDestination()] = temp[j] + edge.getWeight();
           }
         }
       }
     }
+
+    return temp;
   }
 
   // function call to check negative weight cycle
@@ -59,7 +62,10 @@ public:
   }
   
 
-  void printDistances() {
+  void printDistances(int src) {
+
+    dist = bellmanFord(src);
+
     std::cout<< "Bellman Ford Algo"<<std::endl;
     for (int i = 0; i < s; i++) {
       std::cout << "Distance from " << i << " is " << dist[i] << std::endl;

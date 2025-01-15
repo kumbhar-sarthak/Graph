@@ -9,6 +9,7 @@
 #include "../includes/Graph.h"
 #include "../Algorithms/Dijkstra.h"
 #include "../Algorithms/BellmanFord.h"
+#include "../Algorithms/FloydWarshall.h"
 
 std::pair<std::pair<int,int>,std::pair<int,int>> getValues()
 {
@@ -54,12 +55,14 @@ int main()
 
 	Dijkstra d;
 
-	d.printShortestPaths(0);
+	d.run(0);
 
 	BellmanFord b;
 
-	b.bellmanFord(0);
+	b.printDistances(0);
 
-	b.printDistances();
+	FloydWarshall f;
+
+	f.Run();
 
 }
